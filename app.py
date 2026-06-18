@@ -24,7 +24,7 @@ st.set_page_config(
 st.markdown("""
 <style>
 /* ── Import font ── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ── Root variables ── */
 :root {
@@ -54,7 +54,7 @@ st.markdown("""
 /* ── Page background ── */
 .stApp {
     background-color: var(--bg);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 .main .block-container {
     padding: 2rem 1.5rem 4rem;
@@ -67,7 +67,7 @@ st.markdown("""
     border-right: 1px solid var(--border) !important;
 }
 [data-testid="stSidebar"] * {
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
 }
 [data-testid="stSidebarContent"] {
     padding: 1.5rem 1rem;
@@ -85,7 +85,7 @@ st.markdown("""
     color: var(--text-muted) !important;
     border: none !important;
     border-bottom: 2px solid transparent !important;
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
     font-size: 0.8rem !important;
     font-weight: 500 !important;
     letter-spacing: 0.04em !important;
@@ -111,7 +111,7 @@ st.markdown("""
     background: transparent !important;
     border: 1px solid var(--green-dim) !important;
     color: var(--green) !important;
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
     font-size: 0.8rem !important;
     font-weight: 500 !important;
     letter-spacing: 0.06em !important;
@@ -141,7 +141,7 @@ st.markdown("""
     border: 1px solid var(--border-lit) !important;
     border-radius: var(--radius) !important;
     color: var(--text) !important;
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
     font-size: 0.9rem !important;
 }
 .stTextInput > div > div > input:focus,
@@ -155,7 +155,7 @@ st.markdown("""
 .stFileUploader > label,
 .stRadio > label {
     color: var(--text-muted) !important;
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
     font-size: 0.75rem !important;
     font-weight: 500 !important;
     letter-spacing: 0.06em !important;
@@ -222,7 +222,7 @@ iframe[title="st_dataframe"] {
 }
 [data-testid="stExpander"] summary {
     color: var(--text-muted) !important;
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
     font-size: 0.85rem !important;
     font-weight: 500 !important;
     padding: 0.75rem 1rem !important;
@@ -287,7 +287,7 @@ code {
     background: transparent !important;
     border: 1px solid var(--border-lit) !important;
     color: var(--text-muted) !important;
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
     font-size: 0.75rem !important;
     font-weight: 500 !important;
     letter-spacing: 0.06em !important;
@@ -302,7 +302,7 @@ code {
 
 /* ── Headings and text ── */
 h1, h2, h3 {
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Outfit', sans-serif !important;
     font-weight: 500 !important;
     letter-spacing: -0.02em !important;
     color: var(--text) !important;
@@ -346,7 +346,7 @@ def page_header(title: str, subtitle: str):
         <div style="width: 6px; height: 6px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 8px rgba(74,222,128,0.6);"></div>
         <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #4ade80; letter-spacing: 0.15em; text-transform: uppercase;">{subtitle}</span>
     </div>
-    <h1 style="margin: 0; font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: 500; color: #e5e5e5; letter-spacing: -0.03em;">{title}</h1>
+    <h1 style="margin: 0; font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 600; color: #e5e5e5; letter-spacing: -0.02em;">{title}</h1>
 </div>
 """, unsafe_allow_html=True)
 
@@ -355,7 +355,7 @@ def stat_card(label: str, value: str, accent: bool = False):
     color = "#4ade80" if accent else "#e5e5e5"
     return f"""
 <div style="background: #111; border: 1px solid #1f1f1f; border-radius: 10px; padding: 1rem 1.25rem;">
-    <div style="font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-bottom: 6px;">{label}</div>
+    <div style="font-family: 'Outfit', sans-serif; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-bottom: 6px;">{label}</div>
     <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 500; color: {color};">{value}</div>
 </div>"""
 
@@ -364,7 +364,7 @@ def section_label(text: str):
     st.markdown(f"""
 <div style="display: flex; align-items: center; gap: 10px; margin: 1.5rem 0 0.75rem;">
     <div style="width: 16px; height: 1px; background: #333;"></div>
-    <span style="font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #555;">{text}</span>
+    <span style="font-family: 'Outfit', sans-serif; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #555;">{text}</span>
     <div style="flex: 1; height: 1px; background: #1a1a1a;"></div>
 </div>
 """, unsafe_allow_html=True)
@@ -470,9 +470,13 @@ with st.sidebar:
         <div style="width: 5px; height: 5px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 6px rgba(74,222,128,0.7);"></div>
         <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: #4ade80; letter-spacing: 0.15em; text-transform: uppercase;">Solana</span>
     </div>
-    <div style="font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 500; color: #e5e5e5; letter-spacing: -0.02em;">Wallet Intel</div>
+    <div style="font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 600; color: #e5e5e5; letter-spacing: -0.01em;">Wallet Intel</div>
 </div>
-<div style="height: 1px; background: #1f1f1f; margin-bottom: 1.5rem;"></div>
+<div style="height: 1px; background: #1f1f1f; margin-bottom: 1.25rem;"></div>
+<div style="font-family: 'Outfit', sans-serif; font-size: 0.8rem; color: #666; line-height: 1.65; margin-bottom: 1.25rem;">
+    On-chain data tells you what wallets actually hold and what they've actually bought — not what anyone is saying on social media. This tool surfaces those patterns across groups of wallets so you can make more informed decisions about a token before the crowd catches on.
+</div>
+<div style="height: 1px; background: #1f1f1f; margin-bottom: 1.25rem;"></div>
 """, unsafe_allow_html=True)
 
     components.html("""
@@ -498,7 +502,7 @@ window.addEventListener('message', function(e) {
     helius_key = st.text_input(
         "Helius API Key",
         type="password",
-        placeholder="Enter your API key",
+        placeholder="Paste your key here",
         value=st.session_state["helius_key_value"],
         key="helius_key_input",
     )
@@ -521,24 +525,49 @@ window.parent.postMessage({type: 'clear_helius_key'}, '*');
 
     if helius_key:
         st.markdown("""
-<div style="display: flex; align-items: center; gap: 6px; margin-top: 0.5rem;">
+<div style="display: flex; align-items: center; gap: 6px; margin-top: 0.5rem; margin-bottom: 1.25rem;">
     <div style="width: 4px; height: 4px; border-radius: 50%; background: #4ade80;"></div>
     <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #4ade80;">Connected</span>
 </div>
 """, unsafe_allow_html=True)
     else:
         st.markdown("""
-<div style="display: flex; align-items: center; gap: 6px; margin-top: 0.5rem;">
+<div style="display: flex; align-items: center; gap: 6px; margin-top: 0.5rem; margin-bottom: 1.25rem;">
     <div style="width: 4px; height: 4px; border-radius: 50%; background: #555;"></div>
     <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #555;">No key entered</span>
 </div>
 """, unsafe_allow_html=True)
 
     st.markdown("""
-<div style="height: 1px; background: #1f1f1f; margin: 1.5rem 0 1rem;"></div>
-<div style="font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #444; line-height: 1.8;">
-    Free API key at<br>
-    <a href="https://helius.dev" target="_blank" style="color: #4ade80; text-decoration: none;">helius.dev</a>
+<div style="height: 1px; background: #1f1f1f; margin-bottom: 1.25rem;"></div>
+<div style="font-family: 'Outfit', sans-serif; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #444; margin-bottom: 0.75rem;">How to get a free API key</div>
+
+<div style="display: flex; flex-direction: column; gap: 0.6rem;">
+
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+    <div style="min-width: 18px; height: 18px; border-radius: 50%; background: #1a1a1a; border: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: #4ade80; margin-top: 1px;">1</div>
+    <div style="font-family: 'Outfit', sans-serif; font-size: 0.78rem; color: #555; line-height: 1.5;">Go to <a href="https://helius.dev" target="_blank" style="color: #4ade80; text-decoration: none;">helius.dev</a> and click <span style="color: #888;">Get started free</span></div>
+</div>
+
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+    <div style="min-width: 18px; height: 18px; border-radius: 50%; background: #1a1a1a; border: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: #4ade80; margin-top: 1px;">2</div>
+    <div style="font-family: 'Outfit', sans-serif; font-size: 0.78rem; color: #555; line-height: 1.5;">Create a free account — no credit card needed</div>
+</div>
+
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+    <div style="min-width: 18px; height: 18px; border-radius: 50%; background: #1a1a1a; border: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: #4ade80; margin-top: 1px;">3</div>
+    <div style="font-family: 'Outfit', sans-serif; font-size: 0.78rem; color: #555; line-height: 1.5;">From your dashboard, click <span style="color: #888;">Create new API key</span></div>
+</div>
+
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+    <div style="min-width: 18px; height: 18px; border-radius: 50%; background: #1a1a1a; border: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: #4ade80; margin-top: 1px;">4</div>
+    <div style="font-family: 'Outfit', sans-serif; font-size: 0.78rem; color: #555; line-height: 1.5;">Copy the key and paste it into the field above — it saves automatically</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; padding: 0.6rem 0.75rem; background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 6px;">
+    <div style="font-family: 'Outfit', sans-serif; font-size: 0.72rem; color: #444; line-height: 1.5;">The free tier gives you 100k credits/month — more than enough for regular use. Your key is stored only in your browser and never sent to any server other than Helius.</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -562,31 +591,74 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 with tab1:
     page_header("Cohort Analyzer", "Holder Intelligence")
     st.markdown("""
-<p style="color: #555; font-size: 0.85rem; margin-bottom: 1.5rem; margin-top: -1rem;">
-Classify token holders by total wallet net worth — not just token balance.
+<p style="font-family: 'Outfit', sans-serif; font-size: 0.9rem; color: #555; margin-bottom: 0.5rem; margin-top: -1rem; line-height: 1.65;">
+Most tools show you who holds the most tokens. This shows you who holds the most <em style="color: #888;">money</em> — 
+which is a different question. A wallet holding 1M tokens means more if it also holds $500k in other assets 
+than if it's a fresh wallet with nothing else. Cohort analysis tells you the quality of your holder base, not just the size.
 </p>
 """, unsafe_allow_html=True)
 
-    with st.expander("How to use"):
-        st.markdown("""
-Upload a CSV of holder addresses (from Solscan, Birdeye, or Dexscreener).
-The address column is detected automatically. Results bucket each wallet into
-net-worth tiers — Whale / Shark / Dolphin / Fish / Minnow.
-Whales, Sharks & Dolphins are passed to the Whale Overlap and Recent Buys tabs.
-""")
+    section_label("Load wallets to analyze")
+    st.markdown("""
+<div style="font-family: 'Outfit', sans-serif; font-size: 0.82rem; color: #555; line-height: 1.65; margin-bottom: 1rem;">
+You have three ways to bring in wallet addresses:
+</div>
+<div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem;">
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #4ade80; padding-top: 2px; min-width: 20px;">01</div>
+        <div style="font-family: 'Outfit', sans-serif; font-size: 0.82rem; color: #666; line-height: 1.5;"><span style="color: #999;">Paste a list</span> — copy any wallet addresses and paste them one per line into the text box below</div>
+    </div>
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #4ade80; padding-top: 2px; min-width: 20px;">02</div>
+        <div style="font-family: 'Outfit', sans-serif; font-size: 0.82rem; color: #666; line-height: 1.5;"><span style="color: #999;">Type them in</span> — works the same way, just type or paste addresses directly</div>
+    </div>
+    <div style="display: flex; gap: 10px; align-items: flex-start;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: #4ade80; padding-top: 2px; min-width: 20px;">03</div>
+        <div style="font-family: 'Outfit', sans-serif; font-size: 0.82rem; color: #666; line-height: 1.5;"><span style="color: #999;">Upload a CSV</span> — the most powerful option. Go to a token page on <a href="https://solscan.io" target="_blank" style="color: #4ade80; text-decoration: none;">Solscan</a>, click the <strong style="color: #888;">Holders</strong> tab, then <strong style="color: #888;">Export</strong>. That CSV drops straight in here — address column is detected automatically.</div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
-    c1_file = st.file_uploader("Holder CSV", type=["csv"], key="c1_file")
-    c1_max  = st.slider("Max wallets to analyze", 10, MAX_WALLETS, 50, 10, key="c1_max")
-    c1_btn  = st.button("Run Cohort Analysis →", type="primary",
-                        disabled=not (helius_key and c1_file), key="c1_btn")
+    input_method = st.radio(
+        "Input method",
+        ["Paste / type addresses", "Upload CSV"],
+        key="c1_input_method",
+        horizontal=True,
+    )
+
+    c1_wallets_raw = []
+    c1_file = None
+
+    if input_method == "Paste / type addresses":
+        raw_c1 = st.text_area(
+            "Wallet addresses (one per line)",
+            height=140,
+            placeholder="7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU\nAQ8t7FmGaDQ4AqmNtaX2d9NqfACCHb16yKo8BavExWkV\n...",
+            key="c1_paste",
+        )
+        if raw_c1.strip():
+            c1_wallets_raw = [w.strip() for w in raw_c1.strip().splitlines() if len(w.strip()) >= 32]
+            st.caption(f"{len(c1_wallets_raw)} addresses detected.")
+    else:
+        c1_file = st.file_uploader("Holder CSV (from Solscan, Birdeye, or Dexscreener)", type=["csv"], key="c1_file")
+
+    c1_max = st.slider("Max wallets to analyze", 10, MAX_WALLETS, 50, 10, key="c1_max")
+
+    has_input = bool(c1_wallets_raw) or bool(c1_file)
+    c1_btn = st.button("Run Cohort Analysis →", type="primary",
+                       disabled=not (helius_key and has_input), key="c1_btn")
 
     if c1_btn:
-        wallets = parse_wallets_from_csv(c1_file)
+        if c1_file:
+            wallets = parse_wallets_from_csv(c1_file)
+        else:
+            wallets = c1_wallets_raw
+
         if not wallets:
-            st.error("No valid Solana addresses found in CSV.")
+            st.error("No valid Solana addresses found.")
             st.stop()
         if len(wallets) > c1_max:
-            st.info(f"CSV has {len(wallets)} addresses — analyzing top {c1_max}.")
+            st.info(f"Found {len(wallets)} addresses — analyzing top {c1_max}.")
             wallets = wallets[:c1_max]
 
         section_label("Scanning wallets")
@@ -655,21 +727,23 @@ Whales, Sharks & Dolphins are passed to the Whale Overlap and Recent Buys tabs.
 with tab2:
     page_header("Whale Overlap", "Portfolio Intelligence")
     st.markdown("""
-<p style="color: #555; font-size: 0.85rem; margin-bottom: 1.5rem; margin-top: -1rem;">
-Find tokens shared across multiple large wallets — identify what smart money is holding.
+<p style="font-family: 'Outfit', sans-serif; font-size: 0.9rem; color: #555; margin-bottom: 1.25rem; margin-top: -1rem; line-height: 1.65;">
+If multiple large wallets are independently holding the same token, that's a signal worth paying attention to. 
+This tool surfaces those overlaps — tokens that appear across several wallets simultaneously — 
+so you can distinguish broad conviction from a single whale's position.
 </p>
 """, unsafe_allow_html=True)
 
     source = st.radio(
         "Wallet source",
-        ["Use Whales/Sharks/Dolphins from Cohort tab", "Paste wallets manually", "Upload new CSV"],
+        ["From Cohort Analyzer", "Paste addresses", "Upload CSV"],
         key="t2_source",
         horizontal=True,
     )
 
     t2_wallets = []
 
-    if source == "Use Whales/Sharks/Dolphins from Cohort tab":
+    if source == "From Cohort Analyzer":
         saved = st.session_state.get("whale_wallets", [])
         if saved:
             st.markdown(f"""
@@ -683,14 +757,24 @@ Find tokens shared across multiple large wallets — identify what smart money i
         else:
             st.info("Run the Cohort Analyzer first to populate this automatically.")
 
-    elif source == "Paste wallets manually":
-        raw = st.text_area("Wallet addresses (one per line)", height=150, key="t2_paste")
+    elif source == "Paste addresses":
+        raw = st.text_area(
+            "Wallet addresses (one per line)",
+            height=140,
+            placeholder="7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU\n...",
+            key="t2_paste",
+        )
         if raw.strip():
             t2_wallets = [w.strip() for w in raw.strip().splitlines() if len(w.strip()) >= 32]
             st.caption(f"{len(t2_wallets)} addresses detected.")
 
     else:
-        t2_file = st.file_uploader("Upload wallet CSV", type=["csv"], key="t2_file")
+        st.markdown("""
+<div style="font-family: 'Outfit', sans-serif; font-size: 0.8rem; color: #555; line-height: 1.55; margin-bottom: 0.75rem;">
+Export a holder list from <a href="https://solscan.io" target="_blank" style="color: #4ade80; text-decoration: none;">Solscan</a> (token page → Holders tab → Export) or Birdeye / Dexscreener and upload it below.
+</div>
+""", unsafe_allow_html=True)
+        t2_file = st.file_uploader("Holder CSV", type=["csv"], key="t2_file")
         if t2_file:
             t2_wallets = parse_wallets_from_csv(t2_file)
             if t2_wallets:
@@ -961,20 +1045,23 @@ These tokens were independently acquired by multiple wallets in your window — 
 with tab3:
     page_header("Recent Buys", "Acquisition Scanner")
     st.markdown("""
-<p style="color: #555; font-size: 0.85rem; margin-bottom: 1.5rem; margin-top: -1rem;">
-What tokens have large wallets actually purchased in the last N days?
+<p style="font-family: 'Outfit', sans-serif; font-size: 0.9rem; color: #555; margin-bottom: 1.25rem; margin-top: -1rem; line-height: 1.65;">
+Holdings tell you where wallets are — transaction history tells you where they're going. 
+This tab scans recent buys so you can see what tokens smart-money wallets have actually been 
+accumulating, and flag any tokens that multiple wallets bought independently in the same window.
 </p>
 """, unsafe_allow_html=True)
 
     t3_source = st.radio(
         "Wallet source",
-        ["Use Whales/Sharks/Dolphins from Cohort tab", "Paste wallets manually", "Upload new CSV"],
-        key="t3_source", horizontal=True,
+        ["From Cohort Analyzer", "Paste addresses", "Upload CSV"],
+        key="t3_source",
+        horizontal=True,
     )
 
     t3_wallets = []
 
-    if t3_source == "Use Whales/Sharks/Dolphins from Cohort tab":
+    if t3_source == "From Cohort Analyzer":
         saved3 = st.session_state.get("whale_wallets", [])
         if saved3:
             st.markdown(f"""
@@ -984,13 +1071,23 @@ What tokens have large wallets actually purchased in the last N days?
             t3_wallets = saved3
         else:
             st.info("Run the Cohort Analyzer first to populate this automatically.")
-    elif t3_source == "Paste wallets manually":
-        raw3 = st.text_area("Wallet addresses (one per line)", height=150, key="t3_paste")
+    elif t3_source == "Paste addresses":
+        raw3 = st.text_area(
+            "Wallet addresses (one per line)",
+            height=140,
+            placeholder="7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU\n...",
+            key="t3_paste",
+        )
         if raw3.strip():
             t3_wallets = [w.strip() for w in raw3.strip().splitlines() if len(w.strip()) >= 32]
             st.caption(f"{len(t3_wallets)} addresses detected.")
     else:
-        t3_file = st.file_uploader("Upload wallet CSV", type=["csv"], key="t3_file")
+        st.markdown("""
+<div style="font-family: 'Outfit', sans-serif; font-size: 0.8rem; color: #555; line-height: 1.55; margin-bottom: 0.75rem;">
+Export a holder list from <a href="https://solscan.io" target="_blank" style="color: #4ade80; text-decoration: none;">Solscan</a> (token page → Holders tab → Export) or Birdeye / Dexscreener and upload it below.
+</div>
+""", unsafe_allow_html=True)
+        t3_file = st.file_uploader("Holder CSV", type=["csv"], key="t3_file")
         if t3_file:
             t3_wallets = parse_wallets_from_csv(t3_file)
             if t3_wallets:
@@ -1057,8 +1154,10 @@ What tokens have large wallets actually purchased in the last N days?
 with tab4:
     page_header("Watchlist", "Preset Wallet Scanner")
     st.markdown("""
-<p style="color: #555; font-size: 0.85rem; margin-bottom: 1.5rem; margin-top: -1rem;">
-Scan your personal preset list of wallets for recent token acquisitions.
+<p style="font-family: 'Outfit', sans-serif; font-size: 0.9rem; color: #555; margin-bottom: 1.25rem; margin-top: -1rem; line-height: 1.65;">
+Your curated list of wallets worth tracking — known traders, influencers, or wallets you've identified 
+as consistently early. This runs the same acquisition scan as Recent Buys but against your preset list, 
+so you can check in on what they've been accumulating without rebuilding the list each time.
 </p>
 """, unsafe_allow_html=True)
 
@@ -1129,18 +1228,15 @@ Scan your personal preset list of wallets for recent token acquisitions.
 with tab5:
     page_header("Common Holders", "Cross-Token Analysis")
     st.markdown("""
-<p style="color: #555; font-size: 0.85rem; margin-bottom: 1.5rem; margin-top: -1rem;">
-Find wallets that hold both Token A and Token B — surface the overlap between two communities.
+<p style="font-family: 'Outfit', sans-serif; font-size: 0.9rem; color: #555; margin-bottom: 1.25rem; margin-top: -1rem; line-height: 1.65;">
+Which wallets are positioned in both Token A and Token B? Community overlap is useful for finding 
+migration patterns, coordinated plays, or just understanding how much your holder base overlaps with 
+another project's community. Upload holder exports for two tokens and see exactly who's in both.
 </p>
+<div style="font-family: 'Outfit', sans-serif; font-size: 0.8rem; color: #555; line-height: 1.6; margin-bottom: 1rem; padding: 0.75rem 1rem; background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px;">
+    To get a holder CSV: go to any token page on <a href="https://solscan.io" target="_blank" style="color: #4ade80; text-decoration: none;">Solscan</a> → click the <strong style="color: #888;">Holders</strong> tab → click <strong style="color: #888;">Export</strong>. Do this for both tokens, then upload each file below. The address column is detected automatically.
+</div>
 """, unsafe_allow_html=True)
-
-    with st.expander("How to use"):
-        st.markdown("""
-Export holder CSVs for two tokens from Solscan (Holders tab → Download CSV),
-Birdeye, or Dexscreener. Upload both below. The address column is detected
-automatically. Common holders — wallets present in both files — are listed
-and available to download.
-""")
 
     col1, col2 = st.columns(2)
     with col1:
