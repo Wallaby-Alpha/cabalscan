@@ -14,16 +14,8 @@ import helpers as hlp
 # Establish Core Engine Frames
 st.set_page_config(page_title="CabalScan", page_icon="📡", layout="wide")
 
-# --- Prominent Logo Header (Clean Dynamic Aspect Ratio) ---
-st.markdown(
-    """
-    <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: -1rem; margin-bottom: -2rem;">
-        <img src="app/static/logo_for_cabal_scan.png" style="max-height: 220px; width: auto; object-fit: contain;">
-    </div>
-    <hr style="border-color: #231710; border-width: 1px; margin-bottom: 2rem;">
-    """,
-    unsafe_allow_html=True
-)
+# --- Alternative Quick Streamlit Fix ---
+st.image("logo for cabal scan.png", width=680)
 
 COHORT_BRACKETS = [
     {"name": "Whale 🐋",   "min_usd": 100_000, "max_usd": float("inf")},
