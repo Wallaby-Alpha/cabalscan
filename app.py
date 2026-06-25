@@ -14,6 +14,13 @@ import helpers as hlp
 # Establish Core Engine Frames
 st.set_page_config(page_title="CabalScan", page_icon="📡", layout="wide")
 
+# --- Prominent Logo Header ---
+col_logo_left, col_logo_center, col_logo_right = st.columns([1, 2, 1])
+with col_logo_center:
+    # This automatically scales the logo beautifully at the top of the war room
+    st.image("logo for cabal scan.png", use_container_width=True)
+st.markdown("<br>", unsafe_allow_html=True)
+
 COHORT_BRACKETS = [
     {"name": "Whale 🐋",   "min_usd": 100_000, "max_usd": float("inf")},
     {"name": "Shark 🦈",   "min_usd": 25_000,  "max_usd": 100_000},
