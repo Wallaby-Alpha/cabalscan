@@ -149,6 +149,18 @@ iframe { display: none; }
 </style>
 """, unsafe_allow_html=True)
 
+# --- Global Operational Brackets ---
+MAX_WALLETS = 150
+ADDRESS_COL_CANDIDATES = ["Account", "Wallet Address", "Wallet", "Address", "Owner", "owner", "address", "wallet"]
+
+COHORT_BRACKETS = [
+    {"name": "Whale 🐋",   "min_usd": 100_000, "max_usd": float("inf")},
+    {"name": "Shark 🦈",   "min_usd": 25_000,  "max_usd": 100_000},
+    {"name": "Dolphin 🐬", "min_usd": 5_000,   "max_usd": 25_000},
+    {"name": "Fish 🐟",    "min_usd": 500,     "max_usd": 5_000},
+    {"name": "Minnow 🦐",  "min_usd": 0,       "max_usd": 500},
+]
+
 # Safe State Authorization Logic
 if "helius_key" not in st.session_state:
     st.session_state["helius_key"] = st.query_params.get("api_key", "")
