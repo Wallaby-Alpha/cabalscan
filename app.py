@@ -28,20 +28,172 @@ ADDRESS_COL_CANDIDATES = ["Account", "Wallet Address", "Wallet", "Address", "Own
 if "helius_key" not in st.session_state:
     st.session_state["helius_key"] = st.query_params.get("api_key", "")
 
-# --- Production Theme Interface Sheet ---
+# --- True Retro-Tactical Palette (Matched exactly to logo DNA) ---
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
-html, body, [class*="css"] { font-family: 'Space Grotesk', sans-serif !important; }
-.main { background-color: #F5EFE4 !important; }
-.main .block-container { background-color: #F5EFE4 !important; padding-top: 1.5rem !important; padding-left: 2rem !important; padding-right: 2rem !important; }
-[data-testid="stSidebar"] { background-color: #1C1208 !important; }
-[data-testid="stSidebar"] p, [data-testid="stSidebar"] span { color: #a89060 !important; }
-.stTabs [data-baseweb="tab-list"] { background-color: #EDE5D4 !important; border-bottom: 1px solid #C8B898 !important; }
-.stTabs [aria-selected="true"] { color: #4A5C2A !important; border-bottom-color: #6A8030 !important; font-weight: 600 !important; }
-.stButton > button { background-color: #3D5018 !important; color: #C8D880 !important; font-weight: 600 !important; border-radius: 5px !important; }
-[data-testid="metric-container"] { background-color: #EDE5D4 !important; border: 1px solid #C8B898 !important; border-radius: 6px; padding: 0.75rem 1rem; }
-[data-testid="stDataFrame"] { border: 1px solid #C8B898 !important; background: #EDE5D4 !important; }
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+/* ── Global Structure Overhaul ── */
+html, body, [class*="css"] {
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+/* Warm Cream Canvas from Logo Background */
+.main {
+    background-color: #EFE9DB !important; 
+}
+.main .block-container {
+    background-color: #EFE9DB !important;
+    padding-top: 1rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    max-width: 90% !important;
+}
+
+/* ── Rich Espresso Sidebar ── */
+[data-testid="stSidebar"] {
+    background-color: #231710 !important; /* Rich logo dark brown */
+    border-right: 2px solid #36261C !important;
+}
+[data-testid="stSidebar"] div, 
+[data-testid="stSidebar"] span, 
+[data-testid="stSidebar"] p {
+    color: #C3B6A7 !important;
+}
+[data-testid="stSidebar"] h1, 
+[data-testid="stSidebar"] h2, 
+[data-testid="stSidebar"] h3 {
+    color: #EFE9DB !important;
+}
+[data-testid="stSidebar"] .stTextInput input {
+    background: #19100A !important;
+    border: 1px solid #4D392C !important;
+    color: #C5D37E !important; /* Oscilloscope line color */
+    font-family: 'Space Mono', monospace !important;
+}
+
+/* ── Tactical Radar Tabs ── */
+.stTabs [data-baseweb="tab-list"] {
+    background-color: #DECDBE !important; /* Matte mid-tone retro accent */
+    border: 2px solid #231710 !important;
+    border-radius: 4px !important;
+    padding: 2px !important;
+}
+.stTabs [data-baseweb="tab"] {
+    color: #5C4D41 !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    padding: 10px 20px !important;
+    transition: all 0.15s ease !important;
+}
+.stTabs [data-baseweb="tab"]:hover {
+    color: #231710 !important;
+    background-color: rgba(255,255,255,0.2) !important;
+}
+.stTabs [aria-selected="true"] {
+    color: #EFE9DB !important;
+    background-color: #231710 !important; /* Active tab matches core brown */
+    border-radius: 3px !important;
+}
+.stTabs [data-baseweb="tab-panel"] {
+    background-color: #EFE9DB !important;
+    padding-top: 2rem !important;
+}
+
+/* ── Typography Framework ── */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif !important;
+    color: #231710 !important; /* Espresso Core Headers */
+    font-weight: 700 !important;
+}
+h1 { font-size: 1.8rem !important; border-bottom: 2px solid #231710 !important; padding-bottom: 0.25rem !important; margin-bottom: 1.5rem !important; }
+h2 { font-size: 1.3rem !important; color: #596643 !important; } /* Muted green from 'scan' text */
+p, li { color: #3A2F26 !important; font-size: 0.95rem !important; font-weight: 500; }
+
+/* ── Military-Style Buttons ── */
+.stButton > button {
+    background-color: #596643 !important; /* Tactical Olive Green */
+    color: #EFE9DB !important;
+    border: 2px solid #231710 !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    border-radius: 4px !important;
+    padding: 0.5rem 1.5rem !important;
+    box-shadow: 2px 2px 0px #231710 !important; /* Flat hard-drop shadow */
+    transition: all 0.1s ease !important;
+}
+.stButton > button:hover {
+    background-color: #485335 !important;
+    color: #FFF !important;
+    transform: translate(1px, 1px) !important;
+    box-shadow: 1px 1px 0px #231710 !important;
+}
+
+/* ── Radar Screen Metrics ── */
+[data-testid="metric-container"] {
+    background-color: #262E1A !important; /* Scope screen dark green background */
+    border: 2px solid #231710 !important;
+    border-radius: 4px !important;
+    padding: 1rem !important;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5) !important;
+}
+[data-testid="metric-container"] label {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: #7E8C68 !important; /* Dim screen grid tone */
+}
+[data-testid="stMetricValue"] {
+    font-family: 'Space Mono', monospace !important;
+    color: #C5D37E !important; /* High-glowing pale waveform yellow */
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 6px rgba(197, 211, 126, 0.6) !important; /* Glowing signal line effect */
+}
+
+/* ── Data Matrices (Tables) ── */
+[data-testid="stDataFrame"] {
+    border: 2px solid #231710 !important;
+    border-radius: 4px !important;
+    background-color: #F4EFE6 !important;
+}
+[data-testid="stDataFrame"] th {
+    background-color: #231710 !important;
+    color: #EFE9DB !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+}
+[data-testid="stDataFrame"] td {
+    font-family: 'Space Mono', monospace !important;
+    font-size: 0.8rem !important;
+    color: #231710 !important;
+    background-color: #F4EFE6 !important;
+}
+[data-testid="stDataFrame"] tr:nth-child(even) td {
+    background-color: #EAE3D4 !important;
+}
+
+/* ── Form Inputs ── */
+.stTextInput input, .stSelectbox select, .stNumberInput input {
+    background-color: #F4EFE6 !important;
+    border: 2px solid #231710 !important;
+    color: #231710 !important;
+    font-family: 'Space Mono', monospace !important;
+    border-radius: 4px !important;
+}
+
+/* ── System Alerts ── */
+[data-testid="stAlert"] {
+    background-color: #EAE3D4 !important;
+    border: 2px solid #231710 !important;
+    border-left: 6px solid #596643 !important;
+    color: #231710 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
